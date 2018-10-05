@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Click the button to go onto the next page:</p>
+    <button onclick="number1()"> press to see more</button>
+
+
+    <p>Click on the button do display more on this page</p>
+    <button onclick="myFunction1()">try it</button>
+
+    <p id="test"></p>
+
+    <h2>JavaScript Prompt</h2>
+
+    <button onclick="myFunction2()">Try it</button>
+
+
+    <p>Click the button to display a random number between 1 and 49.</p>
+
+    <button onclick="myFunction3()">Try it</button>
+    <p>time waster</p>
+    <button onclick="timedText()">click to see how long you waste your time</button>
+    <input type="text" id="txt">
+
+
+      <script>
+        function myFunction1() {
+          var x;
+          if (confirm("Press a button") ==true) {
+            x = "you pressed OK!, now you are going to see more stuff!!!";
+        }
+         else {
+          x = "why did you press cancel, you hurt my feelings";
+        }
+        document.getElementById("test").innerHTML = x;
+      }
+      </script>
+
+      <script>
+        function number1() {
+          alert("Why did you click on that button you are foolish!!!");
+        }
+        </script>
+
+
+
+        <script>
+        function myFunction2() {
+            var txt;
+            var person = prompt("Please enter your name:", "Harry Potter");
+            if (person == null || person == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Hello " + person + "! How are you today?";
+            }
+            document.getElementById("help").innerHTML = txt;
+        }
+        </script>
+
+
+
+  <p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="test"></p>
+<script>
+function myFunction3() {
+    var x = Math.floor((Math.random() * 49) + 1);
+    document.getElementById("demo").innerHTML = x;
+    var y = Math.floor((Math.random() * 49) + 1);
+    document.getElementById("demo1").innerHTML = y;
+    var z = Math.floor((Math.random() * 49) + 1);
+    document.getElementById("demo2").innerHTML = z;
+
+    if(x == 30 || y == 30 || z == 30){
+    	  var msg = "You won a million dollars. From a Nigerian Prince";
+    }
+    else{
+    	msg = "  ";
+    	}
+    document.getElementById("test").innerHTML = msg;
+}
+        </script>
+
+
+        <script>
+        function timedText() {
+            var x = document.getElementById("txt");
+            setTimeout(function(){ x.value="2 seconds" }, 2000);
+            setTimeout(function(){ x.value="4 seconds" }, 4000);
+            setTimeout(function(){ x.value="6 seconds" }, 6000);
+            setTimeout(function(){ x.value="8 seconds" }, 8000);
+            setTimeout(function(){ x.value="10 seconds" }, 10000);
+        }
+        </script>
+  </body>
+</html>
